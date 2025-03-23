@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int arr[100]; 
+    int arr[110]; 
     int size, i;
     double sum = 0.0;  
 
