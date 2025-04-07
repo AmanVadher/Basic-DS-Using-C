@@ -7,9 +7,9 @@ typedef struct {
     int *arr;
     int front, rear;
     int capacity;
-} CircularQueue;
+} 
+CircularQueue;
 
-// Function prototypes
 CircularQueue* createQueue();
 int isFull(CircularQueue* queue);
 int isEmpty(CircularQueue* queue);
@@ -55,7 +55,8 @@ int main() {
             default:
                 printf("Invalid choice! Please enter a valid option.\n");
         }
-    } while (choice != 0);
+    } 
+    while (choice != 0);
 
     free(queue->arr);
     free(queue);
@@ -113,9 +114,10 @@ int dequeue(CircularQueue* queue) {
     int data = queue->arr[queue->front];
 
     if (queue->front == queue->rear) {
-        // Only one element in the queue
         queue->front = queue->rear = -1;
-    } else {
+    } 
+    else 
+    {
         queue->front = (queue->front + 1) % queue->capacity;
     }
 
@@ -133,9 +135,9 @@ void display(CircularQueue* queue) {
     do {
         printf("%d ", queue->arr[i]);
         i = (i + 1) % queue->capacity;
-    } while (i != (queue->rear + 1) % queue->capacity);
-
-    printf("\n");
+    } 
+        while (i != (queue->rear + 1) % queue->capacity);
+        printf("\n");
 }
 
 void resizeQueue(CircularQueue* queue) {
